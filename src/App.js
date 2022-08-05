@@ -1,8 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 
 import { useState } from 'react';
 import { apiKey } from './key.js';
+import { Container, Card } from 'semantic-ui-react'; 
+import 'semantic-ui-css/semantic.min.css'
 
 function App() {
 
@@ -25,22 +26,12 @@ function App() {
 
     return (
         <div className="App">
-            <header className="App-header">
-                <img src={logo} className="App-logo" alt="logo" />
-                <p>
-                    Edit <code>src/App.js</code> and save to reload.
-                </p>
-                <a
-                    className="App-link"
-                    href="https://reactjs.org"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    Learn React
-                </a>
-                <button onClick={() => {getWeatherData();} }>Get data</button>
-                {display}
-            </header>
+            <button onClick={() => {getWeatherData();} }>Get data</button>
+            <Card>
+                <Card.Content>
+                    <div>{display}</div>
+                </Card.Content>
+            </Card>
         </div>
     );
 }
