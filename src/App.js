@@ -3,7 +3,6 @@ import './App.css';
 import { useState } from 'react';
 import { apiKey } from './key.js';
 import { Container, Card } from 'semantic-ui-react'; 
-import 'semantic-ui-css/semantic.min.css'
 
 function App() {
 
